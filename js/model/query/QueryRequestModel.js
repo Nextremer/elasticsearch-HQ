@@ -31,7 +31,7 @@ var QueryModel = Backbone.Model.extend({
                     }
                 }
             },
-            "fields" : null,
+            "_source" : null,
             "from":0,
             "size":10,
             "sort":[
