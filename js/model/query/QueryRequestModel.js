@@ -23,8 +23,8 @@ var QueryModel = Backbone.Model.extend({
         queryString:undefined,
         queryObj:{
             "query":{
-                "filtered":{
-                    "query":{
+                "bool":{
+                    "must":{
                         "query_string":{
                             "query":""
                         }

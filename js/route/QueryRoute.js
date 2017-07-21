@@ -87,7 +87,7 @@ queryRoute.doQuery = function () {
     var queryModel = new QueryModel({indexCSV:indexCSV, queryString:queryString, indicesArray:indices});
     queryModel.get('queryObj').size = Math.floor(perPage);
     queryModel.get('queryObj').sort = sortArray;
-    queryModel.get('queryObj').fields = fields;
+    queryModel.get('queryObj')._source = fields;
 
     // issue jquery ajax POST then render
     var documentListView = new DocumentListView({model:queryModel});

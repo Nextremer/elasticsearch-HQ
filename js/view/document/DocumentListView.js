@@ -55,8 +55,8 @@ var DocumentListView = Backbone.View.extend({
                     {key:"_id", name:"ID"}
                 ];
 
-                if (!_.isEmpty(_this.model.get('queryObj').fields)) {
-                    var fieldsArray = _this.model.get('queryObj').fields;
+                if (!_.isEmpty(_this.model.get('queryObj')._source)) {
+                    var fieldsArray = _this.model.get('queryObj')._source;
                     _.each(fieldsArray, function (field) {
 
                         var col = {key:field, name:uppercaseFirst(field), type:"source" };
@@ -114,7 +114,7 @@ var DocumentListView = Backbone.View.extend({
                     result = item;
                     result._raw = JSON.stringify(item, undefined, 2);
 
-                    jQuery.extend(result, item.fields); // merge _source items in to root level of object.
+                    jQuery.extend(result, item._source); // merge _source items in to root level of object.
 
                     result.fields = undefined; // dont need this object nested in here.
 

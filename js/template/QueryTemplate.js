@@ -62,7 +62,7 @@ queryTemplate.sideNav = [
     '</select>',
     '<select id="sortDir" class="span12 selectpicker" data-container="body">',
     '<option data-icon="icon-chevron-sign-up">Ascending</option>',
-    '<option data-icon="icon-chevron-sign-down">Descending</option>',
+    '<option data-icon="icon-chevron-sign-down" selected>Descending</option>',
     '</select>',
     '</div>',
 
